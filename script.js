@@ -40,6 +40,7 @@ const prototypeProjects = [
     tag: ["2025", "Team Project", "GameMaker"],
     links: {
       itch: "https://soliloquymoon.itch.io/lucid-ledger",
+      youtube: "https://youtu.be/EO8SYXlQ9Ms",
       github: "https://github.com/soliloquymoon/Lucid-Ledger",
       notion: "https://road-iodine-d0e.notion.site/Dashboard-293676abd1dd8128871dde613f2614dd"
     },
@@ -65,35 +66,35 @@ const modelingProjects = [
     short: "A stylized 3D hourglass recreation",
     long: "Originally designed for a character sheet in 2024, this hourglass was recreated in 3D. I translated the stylized concept into a game-ready model, focusing on clean shapes, emissive details, and maintaining the original visual mood.",
     tag: ["2025"],
-    imgCount: 0
+    imgCount: 3
   },
   {
     title: "LD Character",
     short: "A stylized LD character model study",
-    long: "",
+    long: "A low-detail 3D character model created to explore stylized proportions, readable silhouettes, and efficient polygon use. The model is fully rigged for basic posing and animation, allowing for experimentation with movements while maintaining simplicity suitable for game-ready implementation. Focused on conveying charm and personality through minimal detail and clear color separation.",
     tag: ["2025"],
-    imgCount: 0
+    imgCount: 3
   },
   {
     title: "SD Character",
     short: "A stylized SD character model study",
     long: "A practice SD-style 3D character (OC) model created to explore stylized proportions, clean silhouette design, and basic rigging workflow. The goal was to develop a compact, game-ready look while experimenting with exaggerated features and a soft, appealing aesthetic.",
     tag: ["2025"],
-    imgCount: 0
+    imgCount: 3
   },
   {
     title: "Bakery",
     short: "A cozy stylized 3D bakery scene",
     long: "A small bakery scene featuring playful, stylized food items. I focused on exploring a variety of materials, such as glossy glazes, soft bread surfaces, and light, creamy textures.",
     tag: ["2025"],
-    imgCount: 0
+    imgCount: 4
   },
   {
     title: "Avocado Logo",
     short: "A 3D jelly-style logo animation",
     long: "A 3D reinterpretation of my 2D GitHub profile logo, built with jelly-like materials and keyframe deformation to create a soft wobbling motion. The animation adds subtle twists and rotation for a playful, organic identity mark.",
     tag: ["2025"],
-    imgCount: 0
+    imgCount: 2
   }
 ];
 
@@ -119,7 +120,8 @@ const workInProgressProjects = [
     title: "UI Icons",
     short: "A practice set of stylized 3D UI icons",
     long: "A practice piece for game UI elements. I modeled this reward badge in a soft, stylized 3D style commonly used in casual and mobile games. I plan to create multiple UI elements to build a cohesive visual style.",
-    tag: ["WIP", "3D Modeling"]
+    tag: ["WIP", "3D Modeling"],
+    imgCount: 1
   }
 ]
 
