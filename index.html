@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siena Moon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Intro -->
+    <section class="intro" id="about">
+        <div class="intro-text">
+            <h1>Siena Moon</h1>
+            <h2>Gameplay · Programming · UI/UX · 2D/3D Art</h2>
+            <p>
+                I'm Siena — a generalist game designer and developer 
+                with skills spanning gameplay design, programming, 2D/3D art, 
+                UI/UX, and interactive prototyping.
+            </p>
+            <div id="moreContent">
+                <p>
+                    I'm completing my B.S. in Computer Science and Data Science
+                    with a Certificate in Game Design at UW-Madison, expected May 2026,
+                    where I've honed both technical and creative expertise.
+                    I have worked on projects ranging from mobile game prototypes
+                    with motion-based controls to narrative-driven visual novels
+                    and 3D modeling for immersive environments.
+                    <br><br>
+                    I'm passionate about crafting player experiences that feel cohesive,
+                    expressive, and meaningful, bridging the gap between design, art,
+                    and technology.
+                </p>
+            </div>
+            <button class="btn-read" id="readMoreBtn">Read More</button>
+        </div>
+
+        <div class="intro-img">
+            <img src="./media/Profile.JPG" alt="profile">
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects" id="projects">
+        <h2 class="section-title">Projects</h2>
+
+        <!-- Prototype -->
+        <div class="sub-section">
+            <h3 class="sub-title">Prototype</h3>
+            <div class="project-grid" id="protoList">
+            </div>
+        </div>
+
+        <!-- 3D Modeling -->
+        <div class="sub-section">
+            <h3 class="sub-title">3D Modeling</h3>
+            <div class="project-grid" id="modelList">
+            </div>
+        </div>
+
+        <!-- Work In Progress -->
+        <div class="sub-section">
+            <h3 class="sub-title">Work In Progress</h3>
+            <div class="project-grid" id="wipList">
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="projectModal" class="modal">
+        <button id="prevBtn" class="modal-nav prev">⟨</button>
+        <button id="nextBtn" class="modal-nav next">⟩</button>
+
+        <div class="modal-content">
+            <div class="modal-top">
+                <div class="modal-left">
+                    <h2 id="modalTitle"></h2>
+            
+                    <div class="modal-meta">
+                        <div id="modalTags" class="tag-box"></div>
+                        <div id="modalLinks" class="link-box"></div>
+                    </div>
+                </div>
+            
+                <div class="modal-right">
+                    <p id="modalDesc"></p>
+                </div>
+            </div>
+    
+            <!-- Carousel -->
+            <div id="modalImages" class="carousel-container"></div>
+        
+            <span id="modalClose">&times;</span>
+        </div>
+    </div>
+
+    <section id="contact">
+        <div class="contact-container">
+          <h2>Contact Me</h2>
+          <ul class="contact-list">
+            <li>Phone: +1 414-317-6096</li>
+            <li>Email: <a href="mailto:soliloquy.moon@gmail.com">soliloquy.moon@gmail.com</a></li>
+            <li>Resume: <a href="JiyunMoon_Resume.pdf" target="_blank">View PDF</a></li>
+          </ul>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
