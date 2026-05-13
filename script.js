@@ -126,22 +126,6 @@ const workInProgressProjects = [
 ]
 
 // -------------------------
-// Load more introduction
-// -------------------------
-const readBtn = document.getElementById("readMoreBtn");
-const moreBox = document.getElementById("moreContent");
-
-readBtn.addEventListener("click", () => {
-  moreBox.classList.toggle("open");
-  if (moreBox.classList.contains("open")) {
-    readBtn.textContent = "Read Less";
-  } else {
-    readBtn.textContent = "Read More";
-  }
-});
-
-
-// -------------------------
 // Add project cards
 // -------------------------
 let currentProjectIndex = 0;
