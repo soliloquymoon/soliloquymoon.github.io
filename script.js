@@ -1,4 +1,15 @@
-const prototypeProjects = [
+const gameProjects = [
+  {
+    title: "Are You Sure?",
+    short: "An educational narrative game about toxic relationships",
+    long: "1st Place Winner — 2026 Life.Love. Game Design Challenge: Toxify.<br><br>Are You Sure? is a narrative-driven game exploring how relationships can become unhealthy even without malicious intentions. Players navigate difficult interpersonal situations and make choices that affect their perception of reality, relationships, and trust in themselves.<br><br>I designed and developed the game, focusing on decision-making systems that explore gaslighting and memory distortion. The game emphasizes psychological tension and meaningful choices without depicting any violence.",
+    tag: ["2026", "Game Jam", "Unity", "1st Place"],
+    links: {
+      // itch: "",
+      youtube: "https://youtu.be/IGlJT6BZJS4?list=PLZt9A6vVLcX8"
+    },
+    imgCount: 6
+  },
   {
     title: "Last One Standing",
     short: "A narrative stat-management survival game",
@@ -103,14 +114,14 @@ const workInProgressProjects = [
     title: "Project Inside Story",
     short: "A branching narrative mystery game",
     long: "Project Inside Story is a narrative-driven mystery game with branching storylines. Players should uncover the truth behind a murder case by gathering clues through conversations, chat logs, keyword searches, and direct confrontations.<br><br>I am working as a solo developer responsible for all design, programming, and visuals. I am focusing on crafting tight, reactive scenes and pacing events so the player feels fully absorbed in the unfolding mystery.",
-    tag: ["WIP", "Prototype", "Personal Work", "Unity"],
+    tag: ["WIP", "Game Project", "Personal Work", "Unity"],
     imgCount: 4
   },
   {
     title: "Last Call",
     short: "A drink-crafting simulation game",
     long: "Last Call is a bartender simulation game focused on crafting and condition-based orders. Players should match the drink stats to the order conditions.<br><br>I worked as a solo developer responsible for design, programming, and visuals. I focused on iterative balancing using R to fine-tune ingredient values and maintain fairness between recipes.",
-    tag: ["WIP", "Prototype", "Personal Work", "Unity"],
+    tag: ["WIP", "Game Project", "Personal Work", "Unity"],
     links: {
       github: "https://github.com/soliloquymoon/Last-Call/"
     },
@@ -135,45 +146,60 @@ function addProjects(listId, projects) {
   const list = document.getElementById(listId);
 
   projects.forEach((p, index) => {
-      const card = document.createElement("div");
-      card.className = "project-card";
+    const card = document.createElement("div");
+    card.className = "project-card";
 
-      let tagHTML = "";
-      if (p.tag && Array.isArray(p.tag)) {
-          tagHTML = `
-            <div class="tag-box">
-                ${p.tag.slice(1).map(t => `<span class="tag">${t}</span>`).join("")}
-            </div>
-          `;
-      }
+    // Determine media folder from project list
+    let folder = "gameProject";
 
-      card.innerHTML = `
-        <video 
-            src="./media/${p.title}/video.mp4"
-            autoplay
-            muted
-            loop
-            playsinline
-            class="project-video">
-        </video>
+    if (modelingProjects.includes(p)) {
+      folder = "modeling";
+    } else if (workInProgressProjects.includes(p)) {
+      folder = "wip";
+    }
 
-        <div class="project-info">
-            <h3>${p.title}</h3>
-            ${tagHTML}
-            <p>${p.short || p.desc || ""}</p>
+    let subfolder = p.title;
+    subfolder = p.title.replace(/[!.,?]/g, "");
+
+    const mediaPath = `./media/${folder}/${subfolder}`;
+
+    let tagHTML = "";
+    if (p.tag && Array.isArray(p.tag)) {
+      tagHTML = `
+        <div class="tag-box">
+          ${p.tag.slice(1).map(t => `<span class="tag">${t}</span>`).join("")}
         </div>
+      `;
+    }
+
+    card.innerHTML = `
+      <video
+        src="${mediaPath}/video.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        class="project-video">
+      </video>
+
+      <div class="project-info">
+        <h3>${p.title}</h3>
+        ${tagHTML}
+        <p>${p.short || p.desc || ""}</p>
+      </div>
     `;
 
-      card.addEventListener("click", () => {
-        currentProjectList = projects;
-        currentProjectIndex = index;
-        openModal(p);
-      });
-      list.appendChild(card);
+    card.addEventListener("click", () => {
+      currentProjectList = projects;
+      currentProjectIndex = index;
+      openModal(p);
+    });
+
+    list.appendChild(card);
   });
 }
 
-addProjects("protoList", prototypeProjects);
+addProjects("projectList", gameProjects);
 addProjects("modelList", modelingProjects);
 addProjects("wipList", workInProgressProjects);
 
@@ -244,49 +270,65 @@ function openModal(project) {
         linkBox.appendChild(a);
       }
     }
-
-  const container = document.getElementById("modalImages");
-  container.innerHTML = "";
-
-  const carousel = document.createElement("div");
-  carousel.className = "carousel";
-
-  const total = project.imgCount || 0;
-
-  // Video
-  const video = document.createElement("video");
-  video.src = `media/${project.title}/video.mp4`;
-  video.autoplay = true;
-  video.muted = true;
-  video.loop = true;
-  video.playsInline = true;
-  carousel.appendChild(video);
-
-  // Image (jpg/png)
-  for (let i = 1; i <= total; i++) {
-    let loaded = false;
-
-    for (const ext of VALID_EXT) {
-      const url = `media/${project.title}/${i}.${ext}`;
-      const img = document.createElement("img");
-      img.src = url;
-
-      img.onload = function () {
-        if (!loaded) {
-          loaded = true;
-          carousel.appendChild(img);
-        }
-      };
-
-      img.onerror = function () {
-        img.remove();
-      };
+  
+    const container = document.getElementById("modalImages");
+    container.innerHTML = "";
+  
+    const carousel = document.createElement("div");
+    carousel.className = "carousel";
+  
+    const total = project.imgCount || 0;
+  
+    // Automatically determine folder based on project list
+    let folder = "gameProject";
+  
+    if (modelingProjects.includes(project)) {
+      folder = "modeling";
+    } else if (workInProgressProjects.includes(project)) {
+      folder = "wip";
+    } else if (gameProjects.includes(project)) {
+      folder = "gameProject";
     }
-  }
 
-  container.appendChild(carousel);
-  document.getElementById("projectModal").style.display = "flex";
-}
+    let subfolder = project.title;
+    subfolder = project.title.replace(/[!.,?]/g, "");
+  
+    const mediaPath = `media/${folder}/${subfolder}`;
+  
+    // Video
+    const video = document.createElement("video");
+    video.src = `${mediaPath}/video.mp4`;
+    video.autoplay = true;
+    video.muted = true;
+    video.loop = true;
+    video.playsInline = true;
+    carousel.appendChild(video);
+  
+    // Images (jpg/png/jpeg)
+    for (let i = 1; i <= total; i++) {
+      let loaded = false;
+  
+      for (const ext of VALID_EXT) {
+        const url = `${mediaPath}/${i}.${ext}`;
+        const img = document.createElement("img");
+        img.src = url;
+  
+        img.onload = function () {
+          if (!loaded) {
+            loaded = true;
+            carousel.appendChild(img);
+          }
+        };
+  
+        img.onerror = function () {
+          img.remove();
+        };
+      }
+    }
+  
+    container.appendChild(carousel);
+    document.getElementById("projectModal").style.display = "flex";
+  }
 
 // -------------------------
 // Close modal
