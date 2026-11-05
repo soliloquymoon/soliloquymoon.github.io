@@ -1,145 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Siena Moon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
     </nav>
-    
-    <!-- Intro -->
-    <section class="intro" id="about">
-        <div class="intro-text">
-            <h1>Siena Moon</h1>
-            <h2>Game Design · Programming · UI/UX · 2D/3D Art</h2>
-            <p>
-                I'm Siena — a generalist game designer and developer 
-                with skills spanning gameplay design, programming, 2D/3D art, 
-                UI/UX, and interactive prototyping.
-                <br><br>
-                I enjoy building experiences that connect design, technology, 
-                and storytelling into something expressive and memorable.
-            </p>
 
-            <!-- Grid -->
-            <div class="about-grid">
+    <main class="page">
+        <!-- About -->
+        <section id="about">
+            <header class="bar">
+                <h2>About</h2>
+            </header>
 
-                <!-- Education -->
-                <div class="about-card">
+            <div class="profile">
+                <div class="profile-text">
+                    <h1>Siena Moon</h1>
+                    <p class="field">Game Design · Programming · UI/UX · 2D/3D Art</p>
+                    <p>
+                        I'm <mark>Siena</mark>, a generalist <mark>game designer</mark> and <mark>developer</mark>
+                        with skills spanning gameplay design, programming, 2D/3D art,
+                        UI/UX, and interactive prototyping.
+                    </p>
+                    <p>
+                        I enjoy building experiences that connect design, technology, and
+                        storytelling into something expressive and memorable.
+                    </p>
+                </div>
+                <figure class="portrait">
+                    <div class="portrait-frame"><img src="./media/about/Profile.JPG" alt="Siena Moon"></div>
+                    <i class="tape"></i>
+                </figure>
+            </div>
+
+            <div class="log">
+                <div class="log-col">
                     <h3>Education</h3>
-                    <div class="about-item">
-                        <h4>University of Wisconsin–Madison</h4>
-                        <p>
-                            B.S. in Computer Science & Data Science
-                            <br>
-                            Certificate in Game Design
-                        </p>
-                        <span>Aug. 2023 -- May 2026</span>
-                    </div>
+                    <p class="org"><mark>University of Wisconsin–Madison</mark></p>
+                    <p class="time">Aug. 2023 – May 2026</p>
+                    <p>B.S. in Computer Science &amp; Data Science</p>
+                    <p>Certificate in Game Design</p>
                 </div>
-
-                <!-- Experience -->
-                <div class="about-card">
+                <div class="log-col">
                     <h3>Experience</h3>
-
-                    <div class="about-item">
-                        <h4>Field Day Lab</h4>
-                        <p>
-                            Game Development & Game Design Intern
-                        </p>
-                        <span>Feb. 2026 -- Present</span>
-
-                        <ul>
-                            <li>Gameplay system implementation in Unity/C#</li>
-                            <li>Prototyping and development of educational games</li>
-                            <li>Collaborative development workflows</li>
-                        </ul>
-                    </div>
+                    <p class="org"><mark>Field Day Lab</mark></p>
+                    <p class="time">Feb. 2026 – Present</p>
+                    <p>Game Development &amp; Game Design Intern</p>
+                    <ul>
+                        <li>Gameplay system implementation in Unity/C#</li>
+                        <li>Prototyping and development of educational games</li>
+                        <li>Collaborative development workflows</li>
+                    </ul>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="intro-img">
-            <img src="./media/about/Profile.JPG" alt="profile">
-        </div>
-    </section>
+        <!-- Projects -->
+        <section id="projects">
+            <header class="bar">
+                <h2>Projects</h2>
+            </header>
 
-    <!-- Projects -->
-    <section class="projects" id="projects">
-        <h2 class="section-title">Projects</h2>
+            <h3 class="sub">Game Projects</h3>
+            <div class="grid games" id="projectList"></div>
 
-        <!-- Game Projects -->
-        <div class="sub-section">
-            <h3 class="sub-title">Game Projects</h3>
-            <div class="project-grid" id="projectList">
+            <h3 class="sub">3D Modeling</h3>
+            <div class="grid models" id="modelList"></div>
+
+            <h3 class="sub">Work In Progress</h3>
+            <div class="grid wips" id="wipList"></div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <header class="bar">
+                <h2>Contact</h2>
+            </header>
+            <div class="contact">
+                <a class="contact-row" href="mailto:soliloquy.moon@gmail.com"><b>Email</b>soliloquy.moon@gmail.com</a>
+                <a class="contact-row" href="SienaMoon_Resume.pdf" target="_blank" rel="noopener"><b>Resume</b>View
+                    PDF</a>
             </div>
-        </div>
-
-        <!-- 3D Modeling -->
-        <div class="sub-section">
-            <h3 class="sub-title">3D Modeling</h3>
-            <div class="project-grid" id="modelList">
-            </div>
-        </div>
-
-        <!-- Work In Progress -->
-        <div class="sub-section">
-            <h3 class="sub-title">Work In Progress</h3>
-            <div class="project-grid" id="wipList">
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Modal -->
-    <div id="projectModal" class="modal">
-        <button id="prevBtn" class="modal-nav prev">⟨</button>
-        <button id="nextBtn" class="modal-nav next">⟩</button>
-
+    <div id="projectModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button id="prevBtn" class="modal-nav prev" aria-label="Previous project">⟨</button>
+        <button id="nextBtn" class="modal-nav next" aria-label="Next project">⟩</button>
         <div class="modal-content">
+            <button id="modalClose" aria-label="Close">&times;</button>
             <div class="modal-top">
                 <div class="modal-left">
                     <h2 id="modalTitle"></h2>
-            
-                    <div class="modal-meta">
-                        <div id="modalTags" class="tag-box"></div>
-                        <div id="modalLinks" class="link-box"></div>
-                    </div>
+                    <div id="modalTags" class="tags"></div>
+                    <div id="modalLinks" class="links"></div>
                 </div>
-            
                 <div class="modal-right">
                     <p id="modalDesc"></p>
                 </div>
             </div>
-    
-            <!-- Carousel -->
-            <div id="modalImages" class="carousel-container"></div>
-        
-            <span id="modalClose">&times;</span>
+            <div id="modalImages"></div>
         </div>
     </div>
 
-    <section id="contact">
-        <div class="contact-container">
-          <h2>Contact Me</h2>
-          <ul class="contact-list">
-            <li>Phone: +1 414-317-6096</li>
-            <li>Email: <a href="mailto:soliloquy.moon@gmail.com">soliloquy.moon@gmail.com</a></li>
-            <li>Resume: <a href="SienaMoon_Resume.pdf" target="_blank">View PDF</a></li>
-          </ul>
-        </div>
-    </section>
-
+    <script src="data.js"></script>
     <script src="script.js"></script>
-
 </body>
+
 </html>
