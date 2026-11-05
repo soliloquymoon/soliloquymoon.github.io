@@ -46,7 +46,10 @@ function cardHTML(kind, p, i) {
         </div>${ARROW}
       </div>
       <p class="desc">${p.short || ""}</p>
-      <div class="tags">${tagsHTML(rest)}</div>
+      <div class="tag-row">
+        <div class="tags">${tagsHTML(rest)}</div>
+        ${p.laurel ? `<img class="laurel" src="${p.laurel}" alt="Award" onerror="this.remove()">` : ""}
+      </div>
       ${p.role || p.highlight ? `<div class="foot"><div>
         ${p.role ? `<p class="meta">${p.role}</p>` : ""}
         ${p.highlight ? `<p class="hl">${p.highlight}</p>` : ""}
@@ -102,7 +105,24 @@ async function openModal(p) {
   const carousel = document.createElement("div");
   carousel.className = "carousel";
   carousel.innerHTML = videoHTML(p);
-  $("modalImages").replaceChildren(carousel);
+  const dots = document.createElement("div");
+  dots.className = "dots";
+  const mark = () => {
+    const w = (carousel.firstElementChild?.offsetWidth || 1) + 18;
+    const on = Math.round(carousel.scrollLeft / w);
+    [...dots.children].forEach((d, i) => d.classList.toggle("on", i === on));
+  };
+  const sync = () => {
+    dots.innerHTML = carousel.children.length > 1
+      ? [...carousel.children].map((_, i) => `<button type="button" aria-label="Slide ${i + 1}"></button>`).join("") : "";
+    mark();
+  };
+  carousel.addEventListener("scroll", mark, { passive: true });
+  dots.addEventListener("click", (e) => {
+    const i = [...dots.children].indexOf(e.target);
+    if (i >= 0) carousel.scrollTo({ left: i * (carousel.firstElementChild.offsetWidth + 18), behavior: "smooth" });
+  });
+  $("modalImages").replaceChildren(carousel, dots);
   modal.style.display = "flex";
   document.body.style.overflow = "hidden";
 
@@ -111,7 +131,7 @@ async function openModal(p) {
     for (const ext of IMG_EXT) {
       const img = await loadImage(`${mediaPath(p)}/${i}.${ext}`);
       if (img) {
-        if ($("modalTitle").textContent === token) carousel.appendChild(img);
+        if ($("modalTitle").textContent === token) { carousel.appendChild(img); sync(); }
         break;
       }
     }

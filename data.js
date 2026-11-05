@@ -3,19 +3,20 @@ const gameProjects = [
     title: "Are You Sure?",
     category: "Visual novel, Simulation",
     short: "An educational narrative game about toxic relationships",
-    long: "1st Place Winner — 2026 Life.Love. Game Design Challenge: Toxify.<br><br>Are You Sure? is a narrative-driven game exploring how relationships can become unhealthy even without malicious intentions. Players navigate difficult interpersonal situations and make choices that affect their perception of reality, relationships, and trust in themselves.<br><br>I designed and developed the game, focusing on decision-making systems that explore gaslighting and memory distortion. The game emphasizes psychological tension and meaningful choices without depicting any violence.",
-    tag: ["2026", "Game Jam", "1st Place", "Solo", "Unity"],
+    long: "1st Place Winner — 2026 Life.Love. Game Design Challenge: Toxify.<br><br><mark>Are You Sure?</mark> is a narrative-driven game exploring how relationships can become unhealthy even without malicious intentions. Players navigate difficult interpersonal situations and make choices that affect their perception of reality, relationships, and trust in themselves.<br><br>I designed and developed the game, focusing on decision-making systems that explore gaslighting and memory distortion. The game emphasizes psychological tension and meaningful choices without depicting any violence.",
+    tag: ["2026", "Game Jam", "Winner", "Solo", "Unity"],
     links: {
       // itch: "",
       youtube: "https://youtu.be/IGlJT6BZJS4?list=PLZt9A6vVLcX8"
     },
-    imgCount: 6
+    imgCount: 6,
+    laurel: "./media/gameProject/Are You Sure/laurel.png"
   },
   {
     title: "Last One Standing",
     category: "Visual novel, Simulation",
     short: "A narrative stat-management survival game",
-    long: "L.O.S.T is a narrative-driven game focused on stat management and decision-making. Players should survive through a semester with a group project as computer science students, balancing four key stats: stress, tiredness, affinity, and project quality.<br>This project is successfully crowdfunded for the next development phase, full release planned in 2026.<br><br>I worked as a solo developer responsible for all design, programming, and visuals. I focused on creating event stories that resonate with players and balancing stats, ensuring that all four stats meaningfully interact without overwhelming the player.",
+    long: "<mark>L.O.S.T</mark> is a narrative-driven game focused on stat management and decision-making. Players should survive through a semester with a group project as computer science students, balancing four key stats: stress, tiredness, affinity, and project quality.<br>This project is successfully crowdfunded for the next development phase, full release planned in 2026.<br><br>I worked as a solo developer responsible for all design, programming, and visuals. I focused on creating event stories that resonate with players and balancing stats, ensuring that all four stats meaningfully interact without overwhelming the player.",
     tag: ["2025", "Solo", "Unity"],
     links: {
       youtube: "https://youtu.be/z9t0phKUqew"
@@ -26,7 +27,7 @@ const gameProjects = [
     title: "Beat the Sushi",
     category: "Rhythm",
     short: "A timing-based simple rhythm game",
-    long: "Beat the Sushi is a simple rhythm game where players use Spacebar/Backspace along with the rhythm to place the fish perfectly on the sushi.<br><br>I worked as a solo developer responsible for all design, programming, and visuals. I focused on implementing a custom note-timing and spawning system using Unity timing functions for frame-accurate.",
+    long: "<mark>Beat the Sushi</mark> is a simple rhythm game where players use Spacebar/Backspace along with the rhythm to place the fish perfectly on the sushi.<br><br>I worked as a solo developer responsible for all design, programming, and visuals. I focused on implementing a custom note-timing and spawning system using Unity timing functions for frame-accurate.",
     tag: ["2025", "Solo", "Unity"],
     links: {
       itch: "https://soliloquymoon.itch.io/beat-the-sushi",
@@ -39,7 +40,7 @@ const gameProjects = [
     title: "Badger Booze",
     category: "Simulation",
     short: "A mobile bartending game with motion controls",
-    long: "Badger Booze is a mobile bartender tycoon game with point-and-click and motion-based control. Players work as a bartender in a busy bar, crafting drinks to satisfy randomized customer orders.<br><br>I worked as a generalist developer, contributing to game design, programming, animation, and UI/UX design. I designed the mobile motion-control logic and wireframes, and implemented core gameplay systems including order randomization, drink composition, daily analysis, and recipe progression. I also coordinated team workflow and documentation using Notion.",
+    long: "<mark>Badger Booze</mark> is a mobile bartender tycoon game with point-and-click and motion-based control. Players work as a bartender in a busy bar, crafting drinks to satisfy randomized customer orders.<br><br>I worked as a generalist developer, contributing to game design, programming, animation, and UI/UX design. I designed the mobile motion-control logic and wireframes, and implemented core gameplay systems including order randomization, drink composition, daily analysis, and recipe progression. I also coordinated team workflow and documentation using Notion.",
     tag: ["2024", "Team", "Unity"],
     links: {
       youtube: "https://youtu.be/PLnetI8ppNg",
@@ -50,9 +51,9 @@ const gameProjects = [
   },
   {
     title: "Lucid Ledger",
-    category: "Simulation",
+    category: "Strategy",
     short: "A deck-based business sim about trading dreams",
-    long: "Lucid Ledger is a deck-based business simulation game set in a futuristic fantasy world where dreams function as valuable commodities. As the dream accountant, players buy dreams from the market, enhance or modify them using cards to increase their value, and then sell them strategically for profit.<br><br>I worked as a producer, overseeing the project from concept to delivery. I designed the core game concept, managed schedules, and created project documentation. I also contributed to UI/UX design by creating in-game icons, produced the game trailer, and delivered the project presentation.",
+    long: "<mark>Lucid Ledger</mark> is a deck-based business simulation game set in a futuristic fantasy world where dreams function as valuable commodities. As the dream accountant, players buy dreams from the market, enhance or modify them using cards to increase their value, and then sell them strategically for profit.<br><br>I worked as a producer, overseeing the project from concept to delivery. I designed the core game concept, managed schedules, and created project documentation. I also contributed to UI/UX design by creating in-game icons, produced the game trailer, and delivered the project presentation.",
     tag: ["2025", "Team", "GameMaker"],
     links: {
       itch: "https://soliloquymoon.itch.io/lucid-ledger",
@@ -66,7 +67,7 @@ const gameProjects = [
     title: "Jelly Room",
     category: "Management",
     short: "An idle tycoon game about raising jellies",
-    long: "Jelly Room is a simple idle tycoon game where the player manage jellies, upgrade their room, and unlock new jelly types to maximize jelatine production.<br><br>I worked as a solo developer responsible for all design, programming, and visuals. I focused on creating clear growth feedback loops and tuning upgrade pacing to keep player progression satisfying.",
+    long: "<mark>Jelly Room</mark> is a simple idle tycoon game where the player manage jellies, upgrade their room, and unlock new jelly types to maximize jelatine production.<br><br>I worked as a solo developer responsible for all design, programming, and visuals. I focused on creating clear growth feedback loops and tuning upgrade pacing to keep player progression satisfying.",
     tag: ["2024", "Solo", "Unity"],
     links: {
       itch: "https://soliloquymoon.itch.io/jelly-room",
