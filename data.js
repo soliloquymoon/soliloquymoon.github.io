@@ -1,13 +1,37 @@
 const gameProjects = [
+{
+    title: "Locke’s Gambit",
+    category: "Puzzle Strategy",
+    short: "An electrical engineering puzzle strategy game in space",
+    long: `<mark>Locke’s Gambit</mark> is an electrical engineering puzzle-strategy game set aboard a spacecraft
+    dedicated to microchip fabrication in a distant future. Players explore the semiconductor manufacturing process
+    through four interconnected minigames: researching materials, designing chips, planning supply chain routes, and
+    fabricating wafers.<br><br>
+    <mark>Key Contributions:</mark>
+    <ul><li><b>Gameplay & System:</b> Contributed to gameplay implementation across multiple minigames, with a primary focus on Research Lab gameplay. Implemented several Fabrication microgames and maganaged chapter/level data and game assets.</li>
+    <li><b>Onboarding:</b> Designed and implemented onboarding flows to help players understand core mechanics and game progression.</li>
+    <li><b>Playtesting & Iteration:</b> Participated in playtesting sessions, identified usability and gameplay issues, and refined mechanics based on player feedback to improve the overall player experience.</li></ul>`,
+    tag: ["2026", "Shipped", "Internship", "Unity"],
+    links: {
+      game: "https://vaultlearninggames.org/lockesgambit",
+      video: "https://vimeo.com/1238244911"
+    },
+    imgCount: 6,
+  },
   {
     title: "Are You Sure?",
     category: "Visual novel, Simulation",
     short: "An educational narrative game about toxic relationships",
-    long: "1st Place Winner — 2026 Life.Love. Game Design Challenge: Toxify.<br><br><mark>Are You Sure?</mark> is a narrative-driven game exploring how relationships can become unhealthy even without malicious intentions. Players navigate difficult interpersonal situations and make choices that affect their perception of reality, relationships, and trust in themselves.<br><br>I designed and developed the game, focusing on decision-making systems that explore gaslighting and memory distortion. The game emphasizes psychological tension and meaningful choices without depicting any violence.",
+    long: `<mark>1st Place Winner</mark> — 2026 Life.Love. Game Design Challenge: Toxify.<br><br>
+    <mark>Are You Sure?</mark> is a narrative-driven game exploring how relationships can become unhealthy even without malicious intentions.
+    Players navigate difficult interpersonal situations and make choices that affect their perception of reality, relationships, and trust in themselves.<br><br>
+    I designed and developed the game, focusing on decision-making systems that explore gaslighting and memory distortion.
+    The game emphasizes psychological tension and meaningful choices without depicting any violence.`,
     tag: ["2026", "Game Jam", "Winner", "Solo", "Unity"],
     links: {
-      // itch: "",
-      youtube: "https://youtu.be/IGlJT6BZJS4?list=PLZt9A6vVLcX8"
+      // game: "",
+      video: "https://youtu.be/IGlJT6BZJS4?list=PLZt9A6vVLcX8",
+      press: "https://brookhavenlocaltoday.com/jennifer-anns-group-apha-award-toxify-games/"
     },
     imgCount: 6,
     laurel: "./media/gameProject/Are You Sure/laurel.png"
@@ -19,7 +43,7 @@ const gameProjects = [
     long: "<mark>L.O.S.T</mark> is a narrative-driven game focused on stat management and decision-making. Players should survive through a semester with a group project as computer science students, balancing four key stats: stress, tiredness, affinity, and project quality.<br>This project is successfully crowdfunded for the next development phase, full release planned in 2026.<br><br>I worked as a solo developer responsible for all design, programming, and visuals. I focused on creating event stories that resonate with players and balancing stats, ensuring that all four stats meaningfully interact without overwhelming the player.",
     tag: ["2025", "Solo", "Unity"],
     links: {
-      youtube: "https://youtu.be/z9t0phKUqew"
+      video: "https://youtu.be/z9t0phKUqew"
     },
     imgCount: 7
   },
@@ -30,8 +54,8 @@ const gameProjects = [
     long: "<mark>Beat the Sushi</mark> is a simple rhythm game where players use Spacebar/Backspace along with the rhythm to place the fish perfectly on the sushi.<br><br>I worked as a solo developer responsible for all design, programming, and visuals. I focused on implementing a custom note-timing and spawning system using Unity timing functions for frame-accurate.",
     tag: ["2025", "Solo", "Unity"],
     links: {
-      itch: "https://soliloquymoon.itch.io/beat-the-sushi",
-      youtube: "https://youtu.be/DSc0tVdKhdw",
+      game: "https://soliloquymoon.itch.io/beat-the-sushi",
+      video: "https://youtu.be/DSc0tVdKhdw",
       github: "https://github.com/soliloquymoon/Beat-The-Sushi"
     },
     imgCount: 5
@@ -43,7 +67,7 @@ const gameProjects = [
     long: "<mark>Badger Booze</mark> is a mobile bartender tycoon game with point-and-click and motion-based control. Players work as a bartender in a busy bar, crafting drinks to satisfy randomized customer orders.<br><br>I worked as a generalist developer, contributing to game design, programming, animation, and UI/UX design. I designed the mobile motion-control logic and wireframes, and implemented core gameplay systems including order randomization, drink composition, daily analysis, and recipe progression. I also coordinated team workflow and documentation using Notion.",
     tag: ["2024", "Team", "Unity"],
     links: {
-      youtube: "https://youtu.be/PLnetI8ppNg",
+      video: "https://youtu.be/PLnetI8ppNg",
       github: "https://github.com/soliloquymoon/Badger-Booze",
       notion: "https://grandiose-dead-45e.notion.site/Badger-Booze-Teamspace-1a0441d60927806c971ec06da9d9f5f1"
     },
@@ -56,8 +80,8 @@ const gameProjects = [
     long: "<mark>Lucid Ledger</mark> is a deck-based business simulation game set in a futuristic fantasy world where dreams function as valuable commodities. As the dream accountant, players buy dreams from the market, enhance or modify them using cards to increase their value, and then sell them strategically for profit.<br><br>I worked as a producer, overseeing the project from concept to delivery. I designed the core game concept, managed schedules, and created project documentation. I also contributed to UI/UX design by creating in-game icons, produced the game trailer, and delivered the project presentation.",
     tag: ["2025", "Team", "GameMaker"],
     links: {
-      itch: "https://soliloquymoon.itch.io/lucid-ledger",
-      youtube: "https://youtu.be/EO8SYXlQ9Ms",
+      game: "https://soliloquymoon.itch.io/lucid-ledger",
+      video: "https://youtu.be/EO8SYXlQ9Ms",
       github: "https://github.com/soliloquymoon/Lucid-Ledger",
       notion: "https://road-iodine-d0e.notion.site/Dashboard-293676abd1dd8128871dde613f2614dd"
     },
@@ -70,8 +94,8 @@ const gameProjects = [
     long: "<mark>Jelly Room</mark> is a simple idle tycoon game where the player manage jellies, upgrade their room, and unlock new jelly types to maximize jelatine production.<br><br>I worked as a solo developer responsible for all design, programming, and visuals. I focused on creating clear growth feedback loops and tuning upgrade pacing to keep player progression satisfying.",
     tag: ["2024", "Solo", "Unity"],
     links: {
-      itch: "https://soliloquymoon.itch.io/jelly-room",
-      youtube: "https://youtu.be/ePx51h6XfQE",
+      game: "https://soliloquymoon.itch.io/jelly-room",
+      video: "https://youtu.be/ePx51h6XfQE",
       github: "https://github.com/soliloquymoon/Jelly-Room"
     },
     imgCount: 3
@@ -120,14 +144,14 @@ const workInProgressProjects = [
   {
     title: "Project Inside Story",
     short: "A branching narrative mystery game",
-    long: "Project Inside Story is a narrative-driven mystery game with branching storylines. Players should uncover the truth behind a murder case by gathering clues through conversations, chat logs, keyword searches, and direct confrontations.<br><br>I am working as a solo developer responsible for all design, programming, and visuals. I am focusing on crafting tight, reactive scenes and pacing events so the player feels fully absorbed in the unfolding mystery.",
+    long: "<mark>Project Inside Story</mark> is a narrative-driven mystery game with branching storylines. Players should uncover the truth behind a murder case by gathering clues through conversations, chat logs, keyword searches, and direct confrontations.<br><br>I am working as a solo developer responsible for all design, programming, and visuals. I am focusing on crafting tight, reactive scenes and pacing events so the player feels fully absorbed in the unfolding mystery.",
     tag: ["WIP", "Game Project", "Solo", "Unity"],
     imgCount: 4
   },
   {
     title: "Last Call",
     short: "A drink-crafting simulation game",
-    long: "Last Call is a bartender simulation game focused on crafting and condition-based orders. Players should match the drink stats to the order conditions.<br><br>I worked as a solo developer responsible for design, programming, and visuals. I focused on iterative balancing using R to fine-tune ingredient values and maintain fairness between recipes.",
+    long: "<mark>Last Call</mark> is a bartender simulation game focused on crafting and condition-based orders. Players should match the drink stats to the order conditions.<br><br>I worked as a solo developer responsible for design, programming, and visuals. I focused on iterative balancing using R to fine-tune ingredient values and maintain fairness between recipes.",
     tag: ["WIP", "Game Project", "Solo", "Unity"],
     links: {
       github: "https://github.com/soliloquymoon/Last-Call/"

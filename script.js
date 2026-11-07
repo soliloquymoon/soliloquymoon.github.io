@@ -2,7 +2,8 @@
 // tag[0] is the year; the remaining tags are shown as tag chips.
 
 const ARROW = `<svg class="arrow" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 23 23 5M9 5h14v14"/></svg>`;
-const LINK_LABELS = { itch: "itch.io", youtube: "Demo Video", github: "GitHub", notion: "Notion" };
+const LINK_ARROW = `<svg class="link-arrow" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2.5 9.5 9.5 2.5M3.5 2.5h6v6"/></svg>`;
+const LINK_LABELS = { game: "Play Game", video: "Watch Video", github: "GitHub", notion: "Notion", press: "Press Article" };
 const IMG_EXT = ["png", "jpg", "jpeg"];
 const $ = (id) => document.getElementById(id);
 
@@ -14,12 +15,17 @@ const FOLDERS = [
 
 function mediaPath(p) {
   const folder = FOLDERS.find(([list]) => list.includes(p))[1];
-  return `./media/${folder}/${p.title.replace(/[!.,?]/g, "")}`;
+  return `./media/${folder}/${p.title.replace(/[!.,?’]/g, "")}`;
 }
 
 const tagsHTML = (arr) => (arr || []).map((t) => `<span class="tag">${t}</span>`).join("");
-const videoHTML = (p) =>
-  `<video src="${mediaPath(p)}/video.mp4" autoplay muted loop playsinline></video>`;
+const videoHTML = (p) => `
+  <video
+    src="${mediaPath(p)}/video.mp4"
+    autoplay muted loop playsinline
+    onerror="this.outerHTML='<img src=\\'${mediaPath(p)}/thumb.png\\' alt=\\'${p.title}\\'>'"
+  ></video>
+`;
 
 // ---------- Cards ----------
 function cardHTML(kind, p, i) {
@@ -99,7 +105,7 @@ async function openModal(p) {
   $("modalTags").innerHTML = tagsHTML(p.tag);
   $("modalLinks").innerHTML = Object.entries(p.links || {})
     .filter(([, url]) => url)
-    .map(([k, url]) => `<a class="link" href="${url}" target="_blank" rel="noopener">${LINK_LABELS[k] || "Link"}</a>`)
+    .map(([k, url]) => `<a class="link" href="${url}" target="_blank" rel="noopener">${LINK_LABELS[k] || "Link"}${LINK_ARROW}</a>`)
     .join("");
 
   const carousel = document.createElement("div");
