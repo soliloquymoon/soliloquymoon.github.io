@@ -8,7 +8,7 @@ const gameProjects = [
     through four interconnected minigames: researching materials, designing chips, planning supply chain routes, and
     fabricating wafers.<br><br>
     <mark>Key Contributions:</mark>
-    <ul><li><b>Gameplay & System:</b> Contributed to gameplay implementation across multiple minigames, with a primary focus on Research Lab gameplay. Implemented several Fabrication microgames and maganaged chapter/level data and game assets.</li>
+    <ul><li><b>Gameplay & System:</b> Contributed to gameplay implementation across multiple minigames, with a primary focus on Research Lab gameplay. Implemented several Fabrication microgames and managed chapter/level data and game assets.</li>
     <li><b>Onboarding:</b> Designed and implemented onboarding flows to help players understand core mechanics and game progression.</li>
     <li><b>Playtesting & Iteration:</b> Participated in playtesting sessions, identified usability and gameplay issues, and refined mechanics based on player feedback to improve the overall player experience.</li></ul>`,
     tag: ["2026", "Shipped", "Internship", "Unity"],
@@ -16,7 +16,7 @@ const gameProjects = [
       game: "https://vaultlearninggames.org/lockesgambit",
       video: "https://vimeo.com/1238244911"
     },
-    imgCount: 6,
+    imgCount: 7,
   },
   {
     title: "Are You Sure?",
